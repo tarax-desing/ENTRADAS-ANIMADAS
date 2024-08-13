@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+
+
+}
+
+.navegacion {
+  
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* media query modifica reglas, se aplican las que hay dentro */
+@media (min-width: 480px) {
+    .navegacion {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.navegacion a {
+    padding: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.navegacion a:hover {
+    background-color: var(--secundary);
+    color: var(--dark);
+}
+
+.container {
+    background-color: orange;
+
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
+}
+span{
+    color: crimson;
+    text-decoration-line: underline;
+}
+
+.content {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 8rem;
+    display: grid;
+    /* Convierto el contenedor en un grid container */
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas con el mismo tamaño */
+    gap: 20px;
+    /* Espacio entre columnas */
+    max-width: 1200px;
+    /* Máxima anchura del contenedor */
+    margin: 0 auto;
+    /* Centrar el contenedor */
+    padding: 20px;
+    background-color: var(--secundary);
+    /* Color de fondo del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.left {
+    max-width: 100%;
+    /* Ancho máximo de la columna izquierda */
+}
+
+.right img {
+    max-width: 100%;
+    /* Las imágenes tendrán un ancho máximo del 100% */
+    height: auto;
+    /* Mantener la proporción de las imágenes */
+    margin-bottom: 10px;
+    /* Espacio entre imágenes */
+}
+
+.text-entry {
+    height: 500px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    padding: 20px;
+    margin: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Selecciona los hijos pares */
+.text-entry:nth-child(even) {
+    transform: translateX(100%);
+}
+
+.text-entry.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imagen {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.column {
+    flex: 1;
+    /* Cada columna ocupa el mismo espacio */
+    margin: 10px;
+    /* Espacio entre columnas */
+}
+
+.left {
+   
+    max-width: 50%; /* Máxima anchura de la columna izquierda */
+    display: flex; /* Usar flexbox en esta columna */
+    flex-direction: column; /* Apilar el contenido en columnas */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+.text-entry img {
+    max-width: 100%;
+    /* Las imágenes ocuparán el ancho completo de la columna */
+    height: auto;
+    /* Mantener la proporción de las imágenes */
+    margin-bottom: 10px;
+    /* Espacio entre imágenes */
+}
